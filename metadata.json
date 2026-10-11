@@ -1,5 +1,5 @@
 {
-  "name": "Modular AI Notes",
+  "name": "Longhand",
   "description": "An intelligent note-taking workspace featuring real-time audio transcription, document analysis, and a context-aware AI assistant.",
   "requestFramePermissions": [
     "microphone"

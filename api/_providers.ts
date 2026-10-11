@@ -45,8 +45,8 @@ const PROVIDERS: ProviderDef[] = [
         model: process.env.OPENROUTER_MODEL || 'meta-llama/llama-3.3-70b-instruct:free',
         visionModel: process.env.OPENROUTER_VISION_MODEL || 'meta-llama/llama-3.2-11b-vision-instruct:free',
         extraHeaders: {
-            'HTTP-Referer': 'https://modular-ai.app',
-            'X-Title': 'Modular AI Notes',
+            'HTTP-Referer': 'https://modularaistack.vercel.app',
+            'X-Title': 'Longhand',
         },
     },
     {

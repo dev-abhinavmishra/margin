@@ -523,7 +523,7 @@ const EditorView: React.FC<EditorViewProps> = ({
           @media print { body { margin: 0; } }
         </style></head><body>
         <h1 class="doc-title">${safeTitle}</h1>
-        <div class="meta">${note.date}${note.duration ? ' · ' + note.duration : ''} · Modular Notes</div>
+        <div class="meta">${note.date}${note.duration ? ' · ' + note.duration : ''} · Longhand</div>
         ${html}
         </body></html>`);
         win.document.close();

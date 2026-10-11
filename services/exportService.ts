@@ -93,13 +93,13 @@ pre{background:#EFECE2;border-radius:8px;padding:12px 14px;overflow-x:auto}
 mark{background:rgba(58,92,140,.15);padding:0 .15em}
 table{border-collapse:collapse;width:100%}th,td{border-bottom:1px solid #DDD8C8;padding:6px 8px;text-align:left}
 img{max-width:100%}</style></head><body>
-<h1>${safeTitle}</h1><p style="color:#8A8375;font-size:13px">${note.date}${note.duration ? ' · ' + note.duration : ''} · Modular Notes</p>
+<h1>${safeTitle}</h1><p style="color:#8A8375;font-size:13px">${note.date}${note.duration ? ' · ' + note.duration : ''} · Longhand</p>
 ${safeContent}</body></html>`;
     download(`${slugify(note.title)}.html`, html, 'text/html');
 };
 
 export interface BackupPayload {
-    app: 'modular-ai-notes';
+    app: 'longhand' | 'modular-ai-notes';
     version: 1;
     exportedAt: string;
     notes: Note[];
@@ -110,7 +110,7 @@ export interface BackupPayload {
 
 export const exportBackup = async () => {
     const payload: BackupPayload = {
-        app: 'modular-ai-notes',
+        app: 'longhand',
         version: 1,
         exportedAt: new Date().toISOString(),
         notes: await getAllNotes(),
@@ -118,7 +118,7 @@ export const exportBackup = async () => {
         quizzes: await getAllQuizzes(),
         versions: await getAllNoteVersions(),
     };
-    download(`modular-notes-backup-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(payload, null, 2), 'application/json');
+    download(`longhand-backup-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(payload, null, 2), 'application/json');
 };
 
 const NOTE_TYPES = new Set(['AUDIO', 'PDF', 'VIDEO', 'TEXT', 'IMAGE']);
@@ -176,8 +176,8 @@ const isValidVersion = (v: any): v is NoteVersion =>
 export const importBackup = async (file: File): Promise<{ notes: number; decks: number; quizzes: number; skipped: number }> => {
     const text = await file.text();
     const data = JSON.parse(text);
-    if (data?.app !== 'modular-ai-notes' || !Array.isArray(data.notes)) {
-        throw new Error('Not a Modular Notes backup file.');
+    if ((data?.app !== 'longhand' && data?.app !== 'modular-ai-notes') || !Array.isArray(data.notes)) {
+        throw new Error('Not a Longhand backup file.');
     }
     let skipped = 0;
     let notes = 0;

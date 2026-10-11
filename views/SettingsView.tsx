@@ -182,7 +182,7 @@ const SettingsView: React.FC<SettingsViewProps> = ({ settings, onUpdateSettings,
             <div className="flex items-center justify-between px-1">
                 <div className="flex items-center gap-2.5">
                     <Icon name="stacks" size={16} className="text-mark" />
-                    <span className="font-serif text-base text-ink">Modular Notes</span>
+                    <span className="font-serif text-base text-ink">Longhand</span>
                 </div>
                 <span className="font-mono text-[10px] text-ink-3">v0.0.0 · local-first</span>
             </div>
