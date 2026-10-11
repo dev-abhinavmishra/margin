@@ -1,4 +1,4 @@
--- Supabase schema for Modular AI Notes.
+-- Supabase schema for Longhand.
 -- Run this in the Supabase SQL editor if you want cloud sync + durable usage limits.
 -- The app works without Supabase (local IndexedDB + in-memory limits) too.
 
