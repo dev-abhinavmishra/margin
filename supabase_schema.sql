@@ -1,4 +1,4 @@
--- Supabase schema for Longhand.
+-- Supabase schema for Margin.
 -- Run this in the Supabase SQL editor if you want cloud sync + durable usage limits.
 -- The app works without Supabase (local IndexedDB + in-memory limits) too.
 

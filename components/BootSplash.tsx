@@ -24,7 +24,7 @@ const BootSplash = () => {
                 />
 
                 <h1 className="font-serif text-[30px] font-semibold text-ink leading-none tracking-tight">
-                    Longhand
+                    Margin
                 </h1>
                 <p className="font-mono text-[10px] text-ink-3 mt-2.5">notes · record · ask · study</p>
 
