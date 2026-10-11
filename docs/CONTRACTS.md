@@ -54,7 +54,7 @@ type, copy voice). This file defines **which files each slice owns** and the
   confirmation), "Copy". Hide on scroll/blur/empty selection. Must not appear
   inside `<input>/<textarea>`.
 - `BootSplash`: short orchestrated reveal for the new identity — a card that
-  stamps/deals in ("Longhand" serif wordmark, hairline frame, one mark
+  stamps/deals in ("Margin" serif wordmark, hairline frame, one mark
   rule) then slides away ~700ms. Exit via AnimatePresence (App wraps it).
 - `UpgradeModal`/`StorageQuotaModal`: restyle to Modal primitive, plain copy.
 - `ThinkingOrbs`/`Skeleton`: restyle to tokens (paper/mono shimmer, no orbs/
@@ -209,7 +209,7 @@ extract the AnalysisView widgets: `QuizSetWidget.tsx`, `FlashcardWidget.tsx`,
   Export backup (`exportBackup`), Import backup (`importBackup` → then
   `onNotesChanged?.()`), Clear all notes (danger, Modal confirm).
   **Shortcuts** — static list (⌘K palette, ⌘F find, 1-4 review grading,
-  space flip). **About** — "Longhand" + version mono.
+  space flip). **About** — "Margin" + version mono.
   Remove the accent-color picker (accent is fixed vermilion) — keep
   `settings.themeColor` untouched in state.
 
